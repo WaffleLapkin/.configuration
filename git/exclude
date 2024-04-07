@@ -1,0 +1,16 @@
+.idea
+.vscode
+.directory
+.attach_pid*
+.gradle/*
+*.iml
+gradle.properties
+ci.sh
+t
+t.rs
+u
+u.rs
+a
+a.rs
+b
+b.rs

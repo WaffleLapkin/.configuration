@@ -1,0 +1,27 @@
+change-id = 121976
+
+# Includes one of the default files in src/bootstrap/defaults
+profile = "compiler"
+
+[llvm]
+# LLVM assertions may help debugging issues with LLVM/codegen
+#assertions = true
+
+# Use CI llvm instead of building one locally
+download-ci-llvm = true
+
+[rust]
+# Make debugging of the compiler possible
+debug = true
+backtrace = true
+
+# Incremental generally makes compilation faster
+incremental = true
+
+# Silly funny thing :3
+description = "wffl cmplr"
+
+# I don't know how people work on rustc without this.
+# While developing it is inevitable that there will be warnings,
+# but I still want to be able to test my changes!!
+deny-warnings = false

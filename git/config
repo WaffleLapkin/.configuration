@@ -1,0 +1,26 @@
+[user]
+	name = Maybe Waffle
+	email = waffle.lapkin@gmail.com
+[core]
+	excludesfile = ~/.gitexclude
+	autocrlf = input
+[pull]
+	ff = only
+[push]
+	autoSetupRemote = true
+[alias]
+	pushfr = push --force-with-lease
+	sw = !git checkout $(git branch --format \"%(refname:lstrip=2)\" | fzf)
+	showobject = show --ext-diff
+	unstage = restore --staged
+[protocol "file"]
+	allow = always # Workaround for... somethinhg
+[merge]
+	conflictstyle = diff3
+[extensions]
+	worktreeConfig = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
