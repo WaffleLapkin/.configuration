@@ -12,7 +12,7 @@
 	pushfr = push --force-with-lease
 	sw = !git checkout $(git branch --format \"%(refname:lstrip=2)\" | fzf)
 	new = !git switch master && git pull && git switch -c
-        remaster = !git switch master && git pull && git switch - && git rebase master
+	remaster = !git switch master && git pull && git switch - && git rebase master
 	showobject = show --ext-diff
 	unstage = restore --staged
 [protocol "file"]
