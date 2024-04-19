@@ -11,6 +11,7 @@
 [alias]
 	pushfr = push --force-with-lease
 	sw = !git checkout $(git branch --format \"%(refname:lstrip=2)\" | fzf)
+	new = !git switch master && git pull && git switch -c
 	showobject = show --ext-diff
 	unstage = restore --staged
 [protocol "file"]
